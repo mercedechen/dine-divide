@@ -1,22 +1,12 @@
-// subtotal = total cost of the bill before tax
-// tipPercent = percentage you want to tip divided by 100, for example: 15 is 15%
-// tip = total amount to pay towards tip
-// taxRate = tax percentage based on location
-// tax = total amount to pay towards sales tax
-// people = 1 defaults to 1 person if no value is passed
-// .toFixed(2) = formats numbers to 2 decimal places but turns it into a string
-// + = add to the beginning to convert it back to a number
-// result.(property) to access the arrays' properties, for example: result.tip
-
-function calculateBill(subtotal, tipPercent, taxRate, people = 1) {
-  let tip = subtotal * (tipPercent/100);
+function calculateBill(subtotal, tipRate, taxRate, people = 1) {
+  let tip = subtotal * (tipRate/100);
   let tax = subtotal * (taxRate/100);
   let total = +(subtotal + tip + tax).toFixed(2);
   let split = +(total / people).toFixed(2);
-  // a function can only return one value but that "one value" can return an object or array containing multiple values
-  return { 
+  
+  return {     
     subtotal: subtotal,
-    tipPercent: tipPercent,
+    tipRate: tipRate,
     tip: tip, 
     taxRate: taxRate,
     tax: tax,
@@ -25,3 +15,24 @@ function calculateBill(subtotal, tipPercent, taxRate, people = 1) {
     split: split
   };
 };
+
+function updateBill() {
+  // Get input values
+  const subtotal = parseFloat(document.getElementById("subtotalInput").value || 0);
+  const tipRate = parseFloat(document.getElementById("tipRateInput").value || 0);
+  const taxRate = parseFloat(document.getElementById("taxRateInput").value || 0);
+  const people = parseFloat(document.getElementById("people").value || 1);
+
+  // Call the function
+  const result = calculateBill(subtotal, tipRate, taxRate, people);
+
+  // Update results in HTML
+  document.getElementById("tipResult").textContent = `Tip: $${result.tip.toFixed(2)}`;
+  document.getElementById("taxResult").textContent = `Tax: $${result.tax.toFixed(2)}`;
+  document.getElementById("totalResult").textContent = `Total: $${result.total}`;
+  document.getElementById("perPersonResult").textContent = `You Pay: $${result.split}`;
+}
+
+const form = document.getElementById("billForm");
+
+form.addEventListener("input", updateBill);
