@@ -8,10 +8,10 @@
   <script src="index.js" defer></script>
 </head>
 <body>
-  <h1>Dine<span id="logo-symbol">&</span>Divide</h1> <!-- Change to logo png-->
+  <h1>Dine<span id="logo-symbol">&</span>Divide</h1>
   <hr>
   <h2>Dine together. Divide smarter.</h2>
-  <form action="">
+  <form id="form">
     <label for="subtotal">Subtotal</label>
     <span class="symbol">$</span>
     <input type="number" id="subtotal" name="subtotal" placeholder="0" inputmode="decimal" step="0.01" min="0">
@@ -19,9 +19,9 @@
     <label for="cstm-rate">Tip %</label>
     <span></span>
     <div id="tip-rates">
-      <button>15</button>
-      <button>18</button>
-      <button>20</button>
+      <button id="fifteen">15</button>
+      <button id="eighteen">18</button>
+      <button id="twenty">20</button>
       <input type="number" id="cstm-rate" name="tip-rate" placeholder="CSTM" inputmode="numeric" min="0">
     </div>
 
@@ -48,7 +48,7 @@
     </div>
   </form>
   
-  <form action="">
+  <form id="split-form">
     <label for="party">Party</label>
     <span></span>
     <input type="number" id="party" name="party" placeholder="No. of Persons" min="2">

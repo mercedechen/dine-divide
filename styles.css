@@ -80,6 +80,7 @@
     border: none;
     border-radius: 5px;
     font-size: 24px;
+    text-transform: uppercase;
   }
 
   #tip-rates button {
@@ -100,7 +101,7 @@
     background-color: buttonface;
     padding: 0 2px;
     border-radius: 5px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   }
 
   p {
@@ -114,6 +115,8 @@
 
   #form-opt button, #split-opt button {
     margin: 10px 5px;
+    padding: 9px 6px;
+    font-size: 16px;
   }
 
   #split-opt {
