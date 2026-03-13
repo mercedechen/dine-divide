@@ -1,8 +1,8 @@
 function calculateBill(subtotal, tipRate, taxRate, people = 1) {
   let tip = subtotal * (tipRate/100);
   let tax = subtotal * (taxRate/100);
-  let total = +(subtotal + tip + tax).toFixed(2);
-  let split = +(total / people).toFixed(2);
+  let total = +(subtotal + tip + tax);
+  let split = +(total / people);
   
   return {     
     subtotal: subtotal,
@@ -26,11 +26,11 @@ function updateBill() {
   // Call the function
   const result = calculateBill(subtotal, tipRate, taxRate, people);
 
-  // Update results in HTML
+  // Round up to 2 decimals and update results in HTML
   document.getElementById("tipResult").textContent = `Tip: $${result.tip.toFixed(2)}`;
   document.getElementById("taxResult").textContent = `Tax: $${result.tax.toFixed(2)}`;
-  document.getElementById("totalResult").textContent = `Total: $${result.total}`;
-  document.getElementById("perPersonResult").textContent = `You Pay: $${result.split}`;
+  document.getElementById("totalResult").textContent = `Total: $${result.total.toFixed(2)}`;
+  document.getElementById("perPersonResult").textContent = `You Pay: $${result.split.toFixed(2)}`;
 }
 
 const form = document.getElementById("billForm");

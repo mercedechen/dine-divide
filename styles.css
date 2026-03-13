@@ -1,125 +1,81 @@
-/* @media (max-width: 400px) { */
-  body {
-    font-family: Arial, Helvetica, sans-serif;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-    padding: 50px 35px;
-    font-size: 14px;
-  }
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: auto;
+  max-width: 375px;
+  min-height: 100vh;
+  background-color: #AAA;
+  color: #282823;
+}
 
-  h1 {
-    font-size: 40px;
-    text-transform: uppercase;
-    font-weight: 600;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-  }
+#container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+}
 
-  #logo-symbol {
-    font-weight: 300;
-  }
+h1 {
+  font-size: 36px;
+  color: #282823;
+  margin: 0;
+  padding: 0;
+}
 
-  hr {
-    width: 190px;
-  }
+#symbol {
+  font-weight: 300;
+  opacity: 0.7;
+  color: #FFF;
+  margin: 0 3px;
+}
 
-  h2, h3 {
-    font-weight: 300;
-    margin: 0;
-  }
+h2 {
+  font-size: 14px;
+  font-weight: 300;
+  font-style: italic;
+  color: #FFF;
+  margin: 0 0 25px 0;
+}
 
-  h2 {
-    font-size: 10px;
-    text-transform: uppercase;
-    font-style: italic;
-    text-align: center;
-  }
+hr {
+  width: 80%;
+}
 
-  h3 {
-    text-transform: uppercase;
-  }
+h1, h2, h3 {
+  text-align: center;
+}
 
-  h3, label {
-    font-size: 20px;
-  }
+h1, h2, h3, label, p {
+  text-transform: uppercase;
+}
 
-  form {
-    display: grid;
-    grid-template-columns: 1fr 30px 178px;
-    align-items: center;
-    margin: 36px 0 0 0;
-    gap: 7px;
-  }
+.row {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0;
+}
 
-  label {
-    text-transform: uppercase;
-  }
+label {
+  margin-bottom: 10px;
+}
 
-  .symbol {
-    display: block; 
-    color: #AAAAAA;
-    padding: 0;
-    font-size: 24px;
-    text-align: right;
-  }
+.inputBox {
+  display: flex;
+  padding: 0 80px;
+}
 
-  input {
-    font-size: 24px;
-    border: none;
-  }
+input {
+  width: 100%;
+  /* border: none; */
+}
 
-  #tip-rates {
-    display: flex;
-  }
+.inputBox, input {
+  font-size: 40px;
+  height: 40px;
+}
 
-  button {
-    border: none;
-    border-radius: 5px;
-    font-size: 24px;
-    text-transform: uppercase;
-  }
-
-  #tip-rates button {
-    padding: 0 2px;
-    margin: 0 2.5px;
-  }
-
-  #cstm-rate {
-    width: 62px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    border: none;
-    margin: 0 2.5px 0 0;
-    padding: 0 2px;
-  }
-
-  #cstm-rate::placeholder {
-    color: #000000;
-    background-color: buttonface;
-    padding: 0 2px;
-    border-radius: 5px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  }
-
-  p {
-    font-size: 24px;
-    margin: 0;
-  }
-
-  #form-opt {
-    grid-area: 7/2/8/4;
-  }
-
-  #form-opt button, #split-opt button {
-    margin: 10px 5px;
-    padding: 9px 6px;
-    font-size: 16px;
-  }
-
-  #split-opt {
-    grid-area: 3/2/4/4;
-  }
-/* } */
+.card {
+  background-color: #FFF;
+  opacity: 0.75;
+  border-radius: 15px;
+  margin: 20px 0;
+  padding: 15px 30px;
+}

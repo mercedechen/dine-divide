@@ -4,41 +4,54 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dine&Divide</title>
-  <!-- <link rel="stylesheet" href="./styles.css"> -->
+  <link rel="stylesheet" href="./styles.css">
   <script src="index.js" defer></script>
 </head>
 <body>
-  <h1>Dine<span id="logo-symbol">&</span>Divide</h1>
-  <hr>
-  <h2>Dine together. Divide smarter.</h2>
-
-  <form id="billForm">
-    <div class="row">
-      <label for="subtotalInput">Subtotal: $</label>
-      <input type="number" id="subtotalInput" required step="0.01" min="0" placeholder="0">
+  <div id="container">
+    <h1>Dine<span id="symbol">&</span>Divide</h1>
+    <hr>
+    <h2>Dine together. Divide smarter.</h2>
+    
+    <div class="card">
+      <form id="billForm">
+        <div class="row">
+          <label for="subtotalInput">Subtotal</label>
+          <div class="inputBox">
+            <span>$</span>
+            <input type="number" id="subtotalInput" required step="0.01" min="0" placeholder="0.00">
+          </div>
+        </div>
+        <div class="row">
+          <label for="tipRateInput">Tip Rate</label>
+          <div class="inputBox">
+            <input type="number" id="tipRateInput" min="0" placeholder="0">
+            <span>%</span>
+          </div>
+        </div>
+        <div class="row">
+          <label for="taxRateInput">Tax Rate</label>
+          <div class="inputBox">
+            <input type="number" id="taxRateInput" required step=".001" min="0" placeholder="0.000">
+            <span>%</span>
+          </div>
+        </div>
+        <div class="row">
+          <label for="people">Party of:</label>
+          <div class="inputBox">
+            <input type="number" id="people" min="1" value="1"placeholder="1">
+          </div>
+        </div>
+      </form>
     </div>
 
-    <div class="row">
-      <label for="tipRateInput">Tip Rate:</label>
-      <input type="number" id="tipRateInput" min="0" placeholder="0">
-    </div>
-
-    <div class="row">
-      <label for="taxRateInput">Tax Rate:</label>
-      <input type="number" id="taxRateInput" required step=".001" min="0" placeholder="0">
-    </div>
-
-    <div class="row">
-      <label for="people">Party of:</label>
-      <input type="number" id="people" min="1" value="1"placeholder="1">
-    </div>
-  </form>
-
-    <div class="row">
+    <div class="card">
+      <h3>Summary</h3>
       <p id="tipResult">Tip: $0.00</p>
       <p id="taxResult">Tax: $0.00</p>
       <p id="totalResult">Total: $0.00</p>
       <p id="perPersonResult">You Pay: $0.00</p>
     </div>
+  </div>
 </body>
 </html>
