@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dine&Divide</title>
+  <title>Dine & Divide</title>
   <link rel="stylesheet" href="./styles.css">
   <script src="index.js" defer></script>
 </head>
@@ -39,17 +39,29 @@
         <div class="row">
           <label for="people">Party of:</label>
           <div class="inputBox">
-            <input type="number" id="people" min="1" value="1"placeholder="1">
+            <input type="number" id="people" min="1" value="1" placeholder="1">
           </div>
         </div>
       </form>
     </div>
 
     <div class="card">
-      <p id="tipResult">Tip: $0.00</p>
-      <p id="taxResult">Tax: $0.00</p>
-      <p id="totalResult">Total: $0.00</p>
-      <p id="perPersonResult">You Pay: $0.00</p>
+      <div class="output">
+        <h3>Tip</h3>
+        <p id="tipResult">$0.00</p>
+      </div>
+      <div class="output">
+        <h3>Tax</h3>
+        <p id="taxResult">$0.00</p>
+      </div>
+      <div class="output">
+        <h3>Total</h3>
+        <p id="totalResult">$0.00</p>
+      </div>
+      <div class="output">
+        <h3>You Pay</h3>
+        <p id="perPersonResult">$0.00</p>
+      </div>
     </div>
   </div>
 </body>

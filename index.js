@@ -27,10 +27,10 @@ function updateBill() {
   const result = calculateBill(subtotal, tipRate, taxRate, people);
 
   // Round up to 2 decimals and update results in HTML
-  document.getElementById("tipResult").textContent = `Tip: $${result.tip.toFixed(2)}`;
-  document.getElementById("taxResult").textContent = `Tax: $${result.tax.toFixed(2)}`;
-  document.getElementById("totalResult").textContent = `Total: $${result.total.toFixed(2)}`;
-  document.getElementById("perPersonResult").textContent = `You Pay: $${result.split.toFixed(2)}`;
+  document.getElementById("tipResult").textContent = `$${result.tip.toFixed(2)}`;
+  document.getElementById("taxResult").textContent = `$${result.tax.toFixed(2)}`;
+  document.getElementById("totalResult").textContent = `$${result.total.toFixed(2)}`;
+  document.getElementById("perPersonResult").textContent = `$${result.split.toFixed(2)}`;
 }
 
 const form = document.getElementById("billForm");
