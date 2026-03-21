@@ -5,7 +5,7 @@ body {
   max-width: 375px;
   min-height: 100vh;
   background-color: #AAA;
-  color: #000;
+  color: #282823;
 }
 
 #container {
@@ -100,4 +100,9 @@ input {
 
 #people, label, .output {
   color: #282823;
+}
+
+footer {
+  text-align: center;
+  font-size: 8pt;
 }
