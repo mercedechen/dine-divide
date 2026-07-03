@@ -4,8 +4,8 @@ body {
   margin: 0 auto;
   max-width: 375px;
   min-height: 100vh;
-  background-color: #AAA;
-  color: #282823;
+  background-color: #2E4057;
+  color: #FFF;
 }
 
 #container {
@@ -15,8 +15,8 @@ body {
 }
 
 h1 {
-  font-size: 36px;
-  color: #282823;
+  font-size: 30px;
+  color: #99C24D;
   margin: 0;
   padding: 0;
 }
@@ -40,11 +40,12 @@ h3, .output p {
   padding: 0;
   font-weight: 300;
   font-size: 18px;
+  color: #FFF;
 }
 
 hr {
   width: 80%;
-  border-color: #fff;
+  border-color: #FFF;
 }
 
 h1, h2 {
@@ -61,10 +62,14 @@ h1, h2, h3, label, p {
   margin: 20px 0;
 }
 
+.row label {
+  color: #FFF;
+}
+
 .inputBox {
   display: flex;
   justify-content: center;
-  width: 100%;
+  color: #99C24D;
 }
 
 input {
@@ -73,14 +78,20 @@ input {
   margin: 0;
   padding: 0 20px;
   text-align: center;
+  border-radius: 6px;
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.125);
+}
+
+input::placeholder {
+  color: #99C24D;
 }
 
 .card {
-  background-color: #FFF;
-  opacity: 0.75;
-  border-radius: 15px;
+  border: 1px solid #FFF;
+  border-radius: 12px;
   margin: 10px 0;
-  padding: 15px 30px;
+  padding: 30px;
 }
 
 .output {
@@ -92,14 +103,16 @@ input {
 .output p {
   margin: 0 20px;
   font-size: 26px;
+  color: #C3C9E9;
+  font-weight: 600;
 }
 
 .inputBox, input {
   font-size: 26px;
 }
 
-#people, label, .output {
-  color: #282823;
+#people {
+  color: #99C24D;
 }
 
 footer {
